@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<style>
+body{
+    background-color: #e9e9e9;
+}
+form {
+    margin: auto;
+    width: 45%;
+}.result {
+    margin: auto;
+    width: 45%;
+    border: 1px solid #ccc;
+}
+</style><head>
+    <title>Marital Affair Prediction</title>
+</head>
+<center>
+<br>
+This is a Logistic Regression Model to predict Marital Affair
+<br>
+</center>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Rate_Marriage:woman's rating of her marriage (1 = very poor, 5 = very good):
+        <input name="rate_marriage" type="number" required>
+        <br>
+        <br> Number of Children:
+        <input name="children" type="number" required>
+        <br>
+        <br> Religious: woman's rating of how religious she is (1 = not religious, 4 = strongly religious)
+        <input name="religious" type="number" required>
+        <br>
+        <br> level of education (9 = grade school, 12 = high school, 14 = some college, 16 = college graduate, 17 = some graduate school, 20 = advanced degree)
+        <input name="education" type="number" required>
+        <br>
+        <br> occupation: woman's occupation (1 = student, 2 = farming/semi-skilled/unskilled, 3 = "white collar", 4 = teacher/nurse/writer/technician/skilled, 5 = managerial/business, 6 = professional with advanced degree)
+        <input name="occupation" type="number" required>
+        <br>
+        <br> Husband's occupation: (1 = student, 2 = farming/semi-skilled/unskilled, 3 = "white collar", 4 = teacher/nurse/writer/technician/skilled, 5 = managerial/business, 6 = professional with advanced degree)
+        <input name="occupation_husband" type="number" required>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+</html>
